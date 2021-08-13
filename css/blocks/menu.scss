@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+   /* margin-bottom: 87px;*/
+    padding-top: 24px;
+    
+    .menu {
+        width: 72%;
+        
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            
+        
+            .menu__item {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+        }
+    }
+}

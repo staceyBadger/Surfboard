@@ -1,0 +1,61 @@
+.benefits {
+    display: flex;
+}
+.benefits__item {
+    flex: 1;
+    padding: 0 3%;
+    position: relative;
+
+    &::before {
+        content: url("../img/circle.svg");
+        position: absolute;
+        top: 30px;
+        right: 0;
+        transform: translateX(50%);
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+.benefit {
+    text-align: center;
+}
+.benefit__image__wrap {
+    display: inline-block;
+    width: 126px;
+    height: 126px;
+    position: relative;
+    background-color: #F2F5F4;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.benefit__icon {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.benefit__title {
+    color: #292929;
+    font-weight: bold;
+    font-size: 27px;
+}
+.benefit__desc {
+    color: #666666;
+    font-size: 18px;
+    font-weight: 300;
+    width: 103%;
+}
+.benefit__image {
+    margin-bottom: 10px;
+}

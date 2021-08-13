@@ -1,0 +1,22 @@
+.advertising {
+    display: flex;
+}
+
+.advertising__list {
+    display: flex;
+
+    .advertising__item {
+        display: flex;
+        width: 27%;
+        
+        .advertising__img {
+            margin-right: 10px;
+        }
+        .advertising__item_text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 39px;
+            line-height: 1.3;
+        }
+    }
+}
