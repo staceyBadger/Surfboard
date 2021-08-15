@@ -1,0 +1,19 @@
+.heading {
+    width: 50%;
+    
+    &__title {
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 65%;
+        line-height: 1.3;
+        margin-bottom: 9px;
+    }
+    &__explanation {
+        font-size: 21px;
+        margin-bottom: 34px;
+    }
+}
+.heading__btn {
+    margin-bottom: 81px;
+}

@@ -54,6 +54,11 @@ body {
   padding: 0;
   color: #FFFFFF; }
 
+p {
+  font-size: 18px;
+  color: #666666;
+  margin: 0; }
+
 ul {
   padding: 0;
   margin: 0; }
@@ -78,10 +83,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 100%; }
-
-p {
-  font-size: 18px;
-  color: #666666; }
 
 .headline__title {
   margin-bottom: 10px; }
@@ -149,10 +150,13 @@ p {
 .benefit__image {
   margin-bottom: 10px; }
 
+.reviews {
+  margin-top: 34px; }
+
 .reviews__display {
   background: #F8FAF9;
-  padding: 50px 45px 34px;
-  margin-bottom: 10px; }
+  padding: 39px 45px 34px;
+  margin-bottom: 23px; }
 
 .reviews__display-inner {
   display: flex; }
@@ -173,16 +177,18 @@ p {
 
 .reviews__content {
   flex: 1;
-  margin-left: 20px; }
+  margin-left: 33px; }
 
 .reviews__title {
   font-size: 27px;
   font-weight: bold;
   color: #292929;
-  margin-bottom: 22px; }
+  margin-bottom: 7px;
+  padding-top: 20px; }
 
 .reviews__text {
-  margin-bottom: 36px; }
+  width: 81%;
+  margin-bottom: 16px; }
 
 .reviews__switcher {
   display: flex;
@@ -220,17 +226,18 @@ p {
   min-height: 650px; }
 
 .form {
-  display: flex; }
+  display: flex;
+  font-size: 18px; }
 
 .form__col {
   flex: 1;
-  margin-right: 20px; }
+  margin-right: 33px; }
   .form__col:last-child {
     margin-right: 0; }
 
 .form__row {
   display: flex;
-  margin-bottom: 18px; }
+  margin-bottom: 9px; }
 
 .form__block {
   flex: 1;
@@ -241,15 +248,89 @@ p {
 .form__input {
   width: 100%;
   border: none;
-  padding: 18px 11px;
+  padding: 17px 16px;
   border: solid 3px transparent;
   border-radius: 4px; }
   .form__input--textarea {
-    height: 180px;
-    resize: none; }
+    height: 151px;
+    resize: none;
+    margin-bottom: 25px; }
   .form__input:focus {
     border-color: #FEDB3F;
     outline: none; }
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px; }
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 20px; }
+  .radio:last-child {
+    margin-right: 0; }
+  .radio--checkbox {
+    margin-bottom: 23px; }
+    .radio--checkbox .radio__visible {
+      border-radius: 5px; }
+      .radio--checkbox .radio__visible::before {
+        background: url("../img/mark.svg") center center no-repeat; }
+
+.radio__elem {
+  display: none; }
+  .radio__elem:checked ~ .radio__visible::before {
+    display: block; }
+
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 10px; }
+  .radio__visible::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: #FEDB3F;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.fixed-menu {
+  position: fixed;
+  top: 20%;
+  right: 3%;
+  z-index: 100; }
+
+.fixed-menu__item {
+  margin-bottom: 5px; }
+  .fixed-menu__item--active .fixed-menu__link {
+    border-color: #fff; }
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative; }
+  .fixed-menu__link::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .heading {
   width: 50%; }
@@ -262,7 +343,10 @@ p {
     margin-bottom: 9px; }
   .heading__explanation {
     font-size: 21px;
-    margin-bottom: 55px; }
+    margin-bottom: 34px; }
+
+.heading__btn {
+  margin-bottom: 81px; }
 
 .contacts {
   display: flex;
@@ -283,17 +367,28 @@ p {
   font-size: 22px;
   font-weight: bold; }
 
-.heading__btn {
-  margin-bottom: 81px; }
-
 .button {
   border-radius: 100px;
   font-size: 16px;
   font-weight: 800;
-  padding: 21px 41px; }
+  padding: 21px 41px;
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
+  border: none; }
   .button--theme--yellow {
     background-color: #FEDB3F;
-    color: #000; }
+    color: #000;
+    text-transform: uppercase; }
+    .button--theme--yellow:hover {
+      background: #fff;
+      color: #FEDB3F; }
+  .button--theme--transparent {
+    background: transparent;
+    color: #fff;
+    padding: 21px 14px; }
+    .button--theme--transparent:hover {
+      color: #FFD517; }
 
 .section {
   height: 100vh;
@@ -310,6 +405,7 @@ p {
   text-align: center; }
 
 .order--section-title {
-  color: #fff; }
+  color: #fff;
+  margin-bottom: 52px; }
 
 /*# sourceMappingURL=main.css.map */
