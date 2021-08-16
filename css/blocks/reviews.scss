@@ -26,17 +26,18 @@
 .reviews__content {
     flex: 1;
     margin-left: 33px;
+    padding-top: 19px;
 }
 .reviews__title {
     font-size: 27px;
     font-weight: bold;
     color: #292929;
     margin-bottom: 7px;
-    padding-top: 20px;
+    
 }
 .reviews__text {
     width: 81%;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
 }
 .reviews__switcher {
     display: flex;

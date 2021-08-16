@@ -1,34 +1,40 @@
 @import url(normalize.css);
-.header {
+/*.menu {
+      width: 72%;
+}*/
+.menu__list {
   display: flex;
-  justify-content: space-between;
-  /* margin-bottom: 87px;*/
-  padding-top: 24px; }
-  .header .menu {
-    width: 72%; }
-    .header .menu__list {
-      display: flex;
-      justify-content: space-around; }
-      .header .menu__list .menu__item {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 5px 0; }
+  align-items: center;
+  margin-top: 6px; }
+
+.menu__item {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 23px; }
+  .menu__item:last-child {
+    margin-right: 0; }
 
 .advertising {
-  display: flex; }
+  display: flex;
+  padding-bottom: 65px; }
 
 .advertising__list {
   display: flex; }
-  .advertising__list .advertising__item {
-    display: flex;
-    width: 27%; }
-    .advertising__list .advertising__item .advertising__img {
-      margin-right: 10px; }
-    .advertising__list .advertising__item .advertising__item_text {
-      font-size: 16px;
-      font-weight: bold;
-      margin-right: 39px;
-      line-height: 1.3; }
+
+.advertising__item {
+  display: flex;
+  width: 27%;
+  margin-right: 16px; }
+  .advertising__item:last-child {
+    margin-right: 0; }
+
+.advertising__img {
+  margin-right: 10px; }
+
+.advertising__item-text {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.3; }
 
 * {
   box-sizing: border-box; }
@@ -39,7 +45,7 @@ img {
 
 .hero {
   background: url("../img/bg_surf.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 100vh;
   min-height: 650px; }
 
@@ -93,7 +99,7 @@ a {
   padding: 0 27%;
   margin-bottom: 45px; }
 
-.headline_head {
+.headline__head {
   text-align: center; }
 
 .benefits {
@@ -119,7 +125,7 @@ a {
 .benefit {
   text-align: center; }
 
-.benefit__image__wrap {
+.benefit__image-wrap {
   display: inline-block;
   width: 126px;
   height: 126px;
@@ -177,18 +183,18 @@ a {
 
 .reviews__content {
   flex: 1;
-  margin-left: 33px; }
+  margin-left: 33px;
+  padding-top: 19px; }
 
 .reviews__title {
   font-size: 27px;
   font-weight: bold;
   color: #292929;
-  margin-bottom: 7px;
-  padding-top: 20px; }
+  margin-bottom: 7px; }
 
 .reviews__text {
   width: 81%;
-  margin-bottom: 16px; }
+  margin-bottom: 13px; }
 
 .reviews__switcher {
   display: flex;
@@ -221,7 +227,7 @@ a {
 
 .order-section {
   background: url("../img/background_order.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 100vh;
   min-height: 650px; }
 
@@ -238,6 +244,8 @@ a {
 .form__row {
   display: flex;
   margin-bottom: 9px; }
+  .form__row:last-child {
+    margin-bottom: 0; }
 
 .form__block {
   flex: 1;
@@ -310,6 +318,8 @@ a {
 
 .fixed-menu__item {
   margin-bottom: 5px; }
+  .fixed-menu__item:last-child {
+    margin-bottom: 0; }
   .fixed-menu__item--active .fixed-menu__link {
     border-color: #fff; }
 
@@ -334,19 +344,17 @@ a {
 
 .heading {
   width: 50%; }
-  .heading__title {
-    font-size: 48px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 65%;
-    line-height: 1.3;
-    margin-bottom: 9px; }
-  .heading__explanation {
-    font-size: 21px;
-    margin-bottom: 34px; }
 
-.heading__btn {
-  margin-bottom: 81px; }
+.heading__title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 9px; }
+
+.heading__explanation {
+  font-size: 21px;
+  margin-bottom: 34px; }
 
 .contacts {
   display: flex;
@@ -366,6 +374,12 @@ a {
 .phone-number__text {
   font-size: 22px;
   font-weight: bold; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 87px;*/
+  padding-top: 24px; }
 
 .button {
   border-radius: 100px;
