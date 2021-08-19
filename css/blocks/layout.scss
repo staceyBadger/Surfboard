@@ -1,3 +1,14 @@
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,11 +21,18 @@ img {
     background-size: cover;
     height: 100vh;
     min-height: rem(650px);
+
+    @include tablets {
+        background: url("../img/bg_surf.png") right no-repeat;
+        background-size: cover;
+        height: 100vh;
+        min-height: rem(650px);
+      }
 }
 
 body {
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: rem(14px);
+    
     line-height: 1.42;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;

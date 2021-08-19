@@ -2,9 +2,15 @@
     display: flex;
     align-items: center;
 }
-.contacts__phone {
+.phone-number {
     font-size: rem(24px);
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+.phone-number__text {
+    white-space: nowrap;
+}
+.phone-number__icon {
+    flex-shrink: 0;
 }

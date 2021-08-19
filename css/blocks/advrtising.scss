@@ -5,6 +5,10 @@
 
 .advertising__list {
     display: flex;
+
+    @include tablets {
+        display: none;
+    }
 }
 .advertising__item {
     display: flex;

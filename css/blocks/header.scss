@@ -1,6 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
-   /* margin-bottom: rem(87px);*/
     padding-top: rem(24px);
+    align-items: flex-start;
+}
+
+.phone-number.header__phone-number {
+    @include tablets {
+        display: none;
+    }
 }
