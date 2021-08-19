@@ -9,12 +9,12 @@ img {
     background: url("../img/bg_surf.png") no-repeat;
     background-size: cover;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
 }
 
 body {
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.42;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ body {
     color: #FFFFFF; 
 }
 p {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #666666;
     margin: 0;
 }
@@ -44,8 +44,9 @@ a {
     text-decoration: none;
 }
 .container {
+    width: 95%;
     margin: 0 auto;
-    width: 940px;
+    max-width: $containerWidth;
 }
 .hero__container {
     display: flex;

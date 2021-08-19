@@ -1,6 +1,6 @@
 .advertising {
     display: flex;
-    padding-bottom: 65px;
+    padding-bottom: rem(65px);
 }
 
 .advertising__list {
@@ -9,7 +9,7 @@
 .advertising__item {
     display: flex;
     width: 27%;
-    margin-right: 16px;
+    margin-right: rem(16px);
 
     &:last-child {
         margin-right: 0;
@@ -17,10 +17,10 @@
 }
         
 .advertising__img {
-    margin-right: 10px;
+    margin-right: rem(10px);
 }
 .advertising__item-text {
-    font-size: 16px;
+    font-size: rem(16px);
     font-weight: bold;
     line-height: 1.3; 
 }

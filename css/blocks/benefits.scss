@@ -9,7 +9,7 @@
     &::before {
         content: url("../img/circle.svg");
         position: absolute;
-        top: 30px;
+        top: rem(30px);
         right: 0;
         transform: translateX(50%);
     }
@@ -30,16 +30,16 @@
 }
 .benefit__image-wrap {
     display: inline-block;
-    width: 126px;
-    height: 126px;
+    width: rem(126px);
+    height: rem(126px);
     position: relative;
     background-color: #F2F5F4;
     border-radius: 50%;
     overflow: hidden;
 }
 .benefit__icon {
-    width: 68px;
-    height: 68px;
+    width: rem(68px);
+    height: rem(68px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,14 +48,14 @@
 .benefit__title {
     color: #292929;
     font-weight: bold;
-    font-size: 27px;
+    font-size: rem(27px);
 }
 .benefit__desc {
     color: #666666;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 300;
     width: 103%;
 }
 .benefit__image {
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
