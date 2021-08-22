@@ -29,6 +29,8 @@ $z-fixed-menu: 100;
 @import 'blocks/phone.number.scss';
 @import 'blocks/header.scss';
 @import 'blocks/humburger.scss';
+@import 'blocks/map.scss';
+@import 'blocks/footer.scss';
 
 
 
@@ -53,12 +55,16 @@ $z-fixed-menu: 100;
             background: #FFD517;
             color: #000;
         }
+
+        
     }
 
     &--theme--transparent {
         background: transparent;
         color: #fff;
         padding: rem(21px) rem(14px);
+        font-weight: 400;
+        font-size: rem(18px);
 
         &:hover {
             color: #FFD517;
@@ -79,8 +85,20 @@ $z-fixed-menu: 100;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+
+    @include phones {
+        font-size: rem(40px);
+    }
 }
 .order--section-title {
     color: #fff;
     margin-bottom: rem(52px);
+
+    @include tablets {
+        margin-bottom: 0;
+    }
+}
+.section__footer {
+    height: rem(93px);
+    min-height: auto;
 }

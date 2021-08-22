@@ -7,6 +7,10 @@
     font-size: rem(18px);
     padding: 0 27%;
     margin-bottom: rem(45px);
+
+    @include phones {
+        padding: 0;
+    }
 }
 .headline__head {
     text-align: center;

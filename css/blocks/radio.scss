@@ -19,6 +19,10 @@
                 background: url("../img/mark.svg") center center no-repeat;
             }
         }
+
+        @include tablets {
+            margin-bottom: rem(35px);
+        }
     }
 }
 .radio__elem {

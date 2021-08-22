@@ -1,10 +1,20 @@
 .benefits {
     display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 .benefits__item {
     flex: 1;
     padding: 0 3%;
     position: relative;
+    margin-bottom: rem(10px);
+
+    @include phones {
+        display: flex;
+        padding: 0;
+    }
 
     &::before {
         content: url("../img/circle.svg");
@@ -12,6 +22,10 @@
         top: rem(30px);
         right: 0;
         transform: translateX(50%);
+
+        @include tablets {
+            display: none;
+        }
     }
 
     &:first-child {
@@ -45,6 +59,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.benefit__text {
+    @include phones {
+        text-align: left;
+    }
+}
 .benefit__title {
     color: #292929;
     font-weight: bold;
@@ -55,7 +75,15 @@
     font-size: rem(18px);
     font-weight: 300;
     width: 103%;
+
+    @include phones {
+        width: 75%;
+    }
 }
 .benefit__image {
-    margin-bottom: rem(10px);
+    
+
+    @include phones {
+        margin-right: 10px;
+    }
 }
