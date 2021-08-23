@@ -11,6 +11,12 @@
     position: relative;
     margin-bottom: rem(10px);
 
+    &:last-child {
+        @include phones {
+            margin-bottom: 0;
+        }
+    }
+
     @include phones {
         display: flex;
         padding: 0;

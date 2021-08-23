@@ -1,9 +1,22 @@
+.container__footer {
+    display: flex;
+    background-color: white;
+    height: rem(87px);
+    min-height: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+}
 .footer {
     color: #292929;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    width: 95%;
+    margin: 0 auto;
+    max-width: $containerWidth;
+    
     @include phones {
         display: flex;
         justify-content: center;

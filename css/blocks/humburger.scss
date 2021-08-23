@@ -6,6 +6,9 @@
     margin-top: 10px;
     margin-right: 5px;
     display: none;
+    position: fixed;
+    top: 3%;
+    right: 3%;
     
 
     @include tablets {

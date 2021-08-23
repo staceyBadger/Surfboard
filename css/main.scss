@@ -76,10 +76,12 @@ $z-fixed-menu: 100;
 
 .section {
     height: 100vh;
-    min-height: rem(650px);
+    min-height: rem(652px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+
 
     @include phones {
         min-height: rem(850px);
@@ -104,7 +106,21 @@ $z-fixed-menu: 100;
         margin-bottom: 0;
     }
 }
+
 .section__footer {
-    height: rem(93px);
-    min-height: auto;
+    position: relative;
+    justify-content: flex-start;
+    
+    @include tablets {
+        justify-content: flex-start;
+    }
 }
+.order-section {
+    background: url("../img/background_order.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: rem(652px);
+   
+}
+
+
