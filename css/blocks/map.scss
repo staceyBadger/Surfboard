@@ -1,6 +1,9 @@
+.map {
+    height: 100%;
+}
 .map__img {
     width: 100%;
     height: 100%;
     padding-bottom: rem(93px);
-    
+    object-fit: cover;
 }

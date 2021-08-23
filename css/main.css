@@ -327,7 +327,9 @@ a {
     margin-right: 0; }
   @media screen and (max-width: 768px) {
     .form__col {
-      margin-right: 0; } }
+      margin-right: 0;
+      display: flex;
+      flex-direction: column; } }
 
 .form__row {
   display: flex;
@@ -543,10 +545,14 @@ a {
   height: 4px;
   border-radius: 10px; }
 
+.map {
+  height: 100%; }
+
 .map__img {
   width: 100%;
   height: 100%;
-  padding-bottom: 5.1666666667rem; }
+  padding-bottom: 5.1666666667rem;
+  object-fit: cover; }
 
 .container__footer {
   display: flex;
@@ -556,6 +562,9 @@ a {
   width: 100%;
   position: fixed;
   bottom: 0; }
+  @media screen and (max-width: 480px) {
+    .container__footer {
+      height: 2.8333333333rem; } }
 
 .footer {
   color: #292929;

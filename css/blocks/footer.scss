@@ -6,6 +6,10 @@
     width: 100%;
     position: fixed;
     bottom: 0;
+
+    @include phones {
+        height: rem(51px);
+    }
     
 }
 .footer {

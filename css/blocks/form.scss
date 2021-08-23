@@ -14,6 +14,7 @@
 }
 .form__col {
     flex: 1;
+    
     margin-right: rem(33px);
 
     &:last-child {
@@ -22,6 +23,8 @@
     
     @include tablets {
         margin-right: 0;
+        display: flex;
+        flex-direction: column;
     }
 
 }
