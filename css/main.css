@@ -40,7 +40,10 @@
     margin-right: 0; }
 
 .advertising__img {
-  margin-right: 0.5555555556rem; }
+  width: 2.7777777778rem;
+  height: 2.7777777778rem;
+  margin-right: 0.5555555556rem;
+  fill: white; }
 
 .advertising__item-text {
   font-size: 0.8888888889rem;
@@ -180,7 +183,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  fill: black; }
 
 @media screen and (max-width: 480px) {
   .benefit__text {
@@ -496,9 +500,10 @@ a {
   flex-shrink: 0; }
 
 .phone-number__icon-elem {
-  height: 0.7222222222rem;
-  width: 0.6666666667rem;
-  margin-right: 0.3333333333rem; }
+  height: 0.8333333333rem;
+  width: 0.7777777778rem;
+  margin-right: 0.3333333333rem;
+  fill: white; }
 
 .phone-number__text {
   font-size: 1.2222222222rem;
@@ -537,11 +542,15 @@ a {
   height: 100%; }
 
 .footer {
-  color: #292929; }
+  color: #292929;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
   @media screen and (max-width: 480px) {
     .footer {
       display: flex;
-      justify-content: center; } }
+      justify-content: center;
+      flex-direction: column; } }
 
 .footer__phone-number__text {
   color: #292929;
@@ -559,9 +568,29 @@ a {
 .footer__contacts {
   display: flex;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .footer__contacts {
+      justify-content: center; } }
 
 .footer__phone-number__text {
   font-style: normal; }
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.social__icon {
+  width: 1.2222222222rem;
+  height: 1.2222222222rem;
+  fill: #B3B3B3; }
+
+.social__item {
+  margin-right: 0.5555555556rem;
+  align-items: center;
+  display: flex; }
+  .social__item:last-child {
+    margin-right: 0; }
 
 .button {
   border-radius: 5.5555555556rem;
@@ -594,6 +623,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: 47.2222222222rem; } }
 
 .section__title {
   color: #292929;

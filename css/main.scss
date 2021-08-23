@@ -31,6 +31,8 @@ $z-fixed-menu: 100;
 @import 'blocks/humburger.scss';
 @import 'blocks/map.scss';
 @import 'blocks/footer.scss';
+@import 'blocks/social.scss';
+
 
 
 
@@ -78,6 +80,10 @@ $z-fixed-menu: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include phones {
+        min-height: rem(850px);
+    }
 }
 .section__title {
     color: #292929;

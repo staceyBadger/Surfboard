@@ -1,9 +1,13 @@
 .footer {
     color: #292929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @include phones {
         display: flex;
         justify-content: center;
+        flex-direction: column;
     }
 }
 .footer__phone-number__text {
@@ -22,6 +26,10 @@
 .footer__contacts {
     display: flex;
     align-items: center;
+
+    @include phones {
+        justify-content: center;
+    }
 }
 .footer__phone-number__text {
     font-style: normal;

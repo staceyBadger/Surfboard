@@ -21,7 +21,10 @@
 }
         
 .advertising__img {
+    width: rem(50px);
+    height: rem(50px);
     margin-right: rem(10px);
+    fill: white;
 }
 .advertising__item-text {
     font-size: rem(16px);
