@@ -39,7 +39,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    color: #FFFFFF; 
+    color: #FFFFFF;
+    position: relative; 
 }
 p {
     font-size: rem(18px);

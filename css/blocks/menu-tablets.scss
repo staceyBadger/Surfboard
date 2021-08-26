@@ -1,0 +1,29 @@
+.menu-tablets {
+    display: none;
+    flex-direction: column;
+    background-color: #333537;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+     
+  
+}
+.menu-tablets__list {
+    text-align: center;
+    height: 78%;
+}
+.menu-tablets__close {
+    width: 20px;
+    height: 20px;
+}
+.menu-tablets-wrap {
+    display: flex;
+    justify-content: flex-end;
+    height: 12%;
+    margin-right: 21px;
+}
+.menu-tablets__item {
+    font-size: rem(36px);
+}

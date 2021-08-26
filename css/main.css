@@ -86,7 +86,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  position: relative; }
 
 p {
   font-size: 1rem;
@@ -560,7 +561,7 @@ a {
   height: 4.8333333333rem;
   min-height: auto;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0; }
   @media screen and (max-width: 480px) {
     .container__footer {
@@ -620,6 +621,101 @@ a {
   .social__item:last-child {
     margin-right: 0; }
 
+.shop {
+  display: flex; }
+
+.shop__img {
+  margin-right: 3.1111111111rem; }
+
+.shop__content {
+  display: flex;
+  flex-direction: column; }
+
+.shop__text-content {
+  display: flex;
+  flex-direction: column; }
+
+.shop__features {
+  width: 60%;
+  margin-bottom: 0.5555555556rem; }
+
+.shop__features__list {
+  display: flex;
+  justify-content: space-between; }
+
+.shop__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; }
+
+.shop__title {
+  color: #292929;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem; }
+
+.shop__item__text-black p {
+  color: #000000;
+  font-weight: bold; }
+
+.shop__wrap__price p {
+  font-size: 3.3333333333rem;
+  color: #151515;
+  font-weight: 300; }
+
+.shop__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 800; }
+
+.shop__link {
+  margin-bottom: 2.9444444444rem;
+  margin-top: 0.5555555556rem; }
+
+.shop__description {
+  width: 80%;
+  margin-bottom: 0.5555555556rem; }
+
+.shop__prevpage__img {
+  width: 30px; }
+
+.shop__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.shop__box {
+  display: flex; }
+
+.menu-tablets {
+  display: none;
+  flex-direction: column;
+  background-color: #333537;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%; }
+
+.menu-tablets__list {
+  text-align: center;
+  height: 78%; }
+
+.menu-tablets__close {
+  width: 20px;
+  height: 20px; }
+
+.menu-tablets-wrap {
+  display: flex;
+  justify-content: flex-end;
+  height: 12%;
+  margin-right: 21px; }
+
+.menu-tablets__item {
+  font-size: 2rem; }
+
 .button {
   border-radius: 5.5555555556rem;
   font-size: 0.8888888889rem;
@@ -674,7 +770,8 @@ a {
 
 .section__footer {
   position: relative;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  min-height: 52.8888888889rem; }
   @media screen and (max-width: 768px) {
     .section__footer {
       justify-content: flex-start; } }
@@ -684,5 +781,8 @@ a {
   background-size: cover;
   height: 100vh;
   min-height: 36.2222222222rem; }
+
+.section-blue {
+  background: #F8FAF9; }
 
 /*# sourceMappingURL=main.css.map */
