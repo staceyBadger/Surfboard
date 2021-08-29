@@ -74,3 +74,11 @@ a {
     height: 100%;
 }
 
+.container-shop {
+    max-width: 960px;
+    
+    @include tablets {
+        max-width: 530px;
+    }
+}
+

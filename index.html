@@ -155,7 +155,7 @@
         </div>
     </section>
     <section class="section section-blue">
-        <div class="container">
+        <div class="container container-shop">
             <div class="shop">
                 <div class="shop__slider">
                     <a href="#" class="shop__prevpage">
@@ -163,11 +163,84 @@
                     </a>
                 </div>
                 <div class="shop__box">
-                    <img src="img/product.png" alt="bord" class="shop__img">
+                    <div class="shop__img-wrap">
+                        <img src="img/product.png" alt="bord" class="shop__img">
+                    </div>                 
                     <div class="shop__content">
-                        <a href="#" class="shop__link">
-                            <img src="img/click.png" alt="" class="shop__content__img">
-                        </a>
+                        <div class="shop__tooltip">
+                            <a href="#" class="shop__link" id ="shop__link">
+                                <img src="img/click.png" alt="" class="shop__content__img">
+                            </a>
+                            <div class="shop-options" id="shop-options">
+                                <ul class="shop-options__list">
+                                    <li class="shop-options__item">
+                                        <div class="shop-options-wrap">
+                                            <svg class="shop-options__svg">
+                                                <use href="img/sprite.svg#length"></use>
+                                            </svg>
+                                            <div class="shop-options-parameter">
+                                                <p>Длина доски</p>
+                                            </div>
+                                        </div>
+                                        <div class="shop-options-value">
+                                            <p>от 2,5 м</p>
+                                        </div>
+                                    </li>
+                                    <li class="shop-options__item">
+                                        <div class="shop-options-wrap">
+                                            <svg class="shop-options__svg">
+                                                <use href="img/sprite.svg#width"></use>
+                                            </svg>
+                                            <div class="shop-options-parameter">
+                                                <p>Ширина доски</p>
+                                            </div>
+                                        </div>
+                                        <div class="shop-options-value">
+                                            <p>от 40 см</p>
+                                        </div>
+                                    </li>
+                                    <li class="shop-options__item">
+                                        <div class="shop-options-wrap">
+                                            <svg class="shop-options__svg">
+                                                <use href="img/sprite.svg#thickness"></use>
+                                            </svg>
+                                            <div class="shop-options-parameter">
+                                                <p>Толщина</p>
+                                            </div>
+                                        </div>
+                                        <div class="shop-options-value">
+                                            <p>8 см</p>
+                                        </div>
+                                    </li>
+                                    <li class="shop-options__item">
+                                        <div class="shop-options-wrap">
+                                            <svg class="shop-options__svg">
+                                                <use href="img/sprite.svg#life-time"></use>
+                                            </svg>
+                                            <div class="shop-options-parameter">
+                                                <p>Срок службы</p>
+                                            </div>
+                                        </div>
+                                        <div class="shop-options-value">
+                                            <p>5 лет</p>
+                                        </div>
+                                    </li>
+                                    <li class="shop-options__item">
+                                        <div class="shop-options-wrap">
+                                            <svg class="shop-options__svg">
+                                                <use href="img/sprite.svg#weight"></use>
+                                            </svg>
+                                            <div class="shop-options-parameter">
+                                                <p>Вес</p>
+                                            </div>
+                                        </div>
+                                        <div class="shop-options-value">
+                                            <p>7-8 кг</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="shop__text-content">
                             <h2 class="shop__title">Лонгборд 2.0</h2>
                             <div class="shop__description">
@@ -457,6 +530,7 @@
             </li>
         </ul>
     </nav>
+    
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

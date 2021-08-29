@@ -39,6 +39,7 @@ $z-fixed-menu: 100;
 
 
 
+
 .button {
     border-radius: rem(100px);
     font-size: rem(16px);
@@ -126,6 +127,11 @@ $z-fixed-menu: 100;
 }
 .section-blue {
     background: #F8FAF9;
+
+    @include tablets {
+        min-height: rem(850px);
+    }
+
 }
 
 
