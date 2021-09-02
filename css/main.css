@@ -879,20 +879,22 @@ a {
   font-size: 1.1666666667rem;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 0.2777777778rem; }
 
 .team__title::after {
   content: url("../img/Polygon_teamUp.svg");
   height: 9px;
   width: 9px;
-  margin-left: 5px; }
+  margin-left: 5px;
+  margin-top: -19px; }
 
 .team__title.active::after {
   content: url("../img/Polygon_team.svg");
   height: 9px;
   width: 9px;
-  margin-left: 5px; }
+  margin-left: 5px;
+  margin-top: -19px; }
 
 .team-text-black {
   color: #000; }
