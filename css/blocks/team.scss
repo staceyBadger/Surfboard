@@ -1,0 +1,100 @@
+.team-section {
+    padding-bottom: rem(70px);
+}
+.team {
+    display: flex;
+}
+.team__item {
+    text-align: center;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.team__content-block {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+.team__title {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: rem(21px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(5px);
+
+   
+}
+
+.team__title::after {
+    content: url("../img/Polygon_teamUp.svg");
+    height: 9px;
+    width: 9px;
+    margin-left: 5px;
+}
+.team__title.active::after {
+    content: url("../img/Polygon_team.svg");
+    height: 9px;
+    width: 9px;
+    margin-left: 5px;
+}
+.team-text-black {
+    color: #000;
+    
+}
+.section__title-team {
+    margin-bottom: rem(50px);
+}
+.team__member {
+    margin-bottom: rem(23px);
+    width: rem(220px);
+    height: rem(290px);
+
+}
+.team__content {
+    overflow: hidden;
+    height: 0;
+    transition: height .5s;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+.team--version--desktop {
+    display: flex;
+    
+    @include tablets {
+        display: none;
+    }
+}
+.team--version--mobile {
+    display: none;
+    
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.team--version--desktop .team__content {
+    position: absolute;
+    top: 100%;
+}

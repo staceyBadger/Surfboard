@@ -1,4 +1,5 @@
 .reviews {
+    position: relative;
     margin-top: rem(34px);
 
     @include tablets {
@@ -75,6 +76,22 @@
 .reviews__switcher {
     display: flex;
     justify-content: center;
+}
 
-    
+.reviews-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.reviews-item.active {
+    position: static;
+    opacity: 1;
+    pointer-events: unset;
+}
+.reviews__switcher-item:hover {
+    border-color: #FEDB3F;
 }
