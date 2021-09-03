@@ -99,3 +99,19 @@ $('.team__title').click(e => {
       
     }
   });
+
+
+  const slider = $('.products-list').bxSlider({
+    pager: false,
+    controls: false
+  });
+$('.shop__prevpage').click(e => {
+  e.preventDefault();
+  slider.goToPrevSlide();
+})
+
+
+$('.shop__nextpage').click(e => {
+  e.preventDefault();
+  slider.goToNextSlide();
+})

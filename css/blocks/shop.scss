@@ -1,11 +1,16 @@
 .shop {
     display: flex;
 
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
     
 }
 .shop__img-wrap {
     width: rem(419px);
-    height: rem(538px);
+    height: rem(517px);
     margin-right: 66px;
 
     @include tablets {
@@ -114,7 +119,9 @@
 
 }
 .shop__prevpage-img {
-    width: 30px;
+    width: 10px;
+    
+    max-width: inherit;
 }
 .shop__slider {
     display: flex;
@@ -135,7 +142,7 @@
 
 
 }
-.shop__box {
+.shop__box-item {
     display: flex;
     
     @include tablets {
