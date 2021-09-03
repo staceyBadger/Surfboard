@@ -887,14 +887,14 @@ a {
   height: 9px;
   width: 9px;
   margin-left: 5px;
-  margin-top: -19px; }
+  margin-top: -3px; }
 
 .team__title.active::after {
   content: url("../img/Polygon_team.svg");
   height: 9px;
   width: 9px;
   margin-left: 5px;
-  margin-top: -19px; }
+  margin-top: -3px; }
 
 .team-text-black {
   color: #000; }
