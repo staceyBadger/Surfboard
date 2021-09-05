@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -619,16 +621,17 @@
     <section class="section order-section">
         <div class="container">
             <h2 class="section__title order--section-title">Закажите доску</h2>
-            <form class="form">
+            <form class="form" autocomplete="off">
+                <input type="hidden" name="to" value="somewhere@mail.com">
                 <div class="form__col">
                     <div class="form__row">
                         <label class="form__block">
                             <div class="form__title">Имя</div>
-                            <input type="text" class="form__input">
+                            <input type="text" name="name" class="form__input">
                         </label>
                         <label class="form__block">
                             <div class="form__title">Телефон</div>
-                            <input type="text" class="form__input">
+                            <input type="text" name="phone" class="form__input">
                         </label>
                     </div>
                     <div class="form__row">
@@ -660,7 +663,7 @@
                     <div class="form__row">
                         <label class="form__block">
                             <div class="form__title">Комментарий</div>
-                            <textarea class="form__input form__input--textarea"></textarea>
+                            <textarea name="comment" class="form__input form__input--textarea"></textarea>
                         </label>
                     </div>
                     <div class="form__controls">
@@ -811,10 +814,19 @@
             </li>
         </ul>
     </nav>
-    
-    
+    <div id="modal" class="modal">
+        <div class="modal__container">
+            <div class="modal__content">
+                Сообщение отправлено
+            </div>
+            <div class="modal__button-container">
+                <a class="button app-submit-btn button--theme--yellow">Закрыть</a>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

@@ -127,11 +127,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    height: 591px;
     @include tablets {
         height: rem(500px);
         align-items: center;
-        
     }
 
     @include phones {
