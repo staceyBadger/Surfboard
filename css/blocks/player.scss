@@ -1,0 +1,134 @@
+
+.player {
+    width: rem(660px);
+    height: rem(392px);
+    position: relative;
+   
+    &.active .player__splash {
+        display: none;
+    }
+
+
+    &.paused {
+        .player__start {
+            background: url("../img/pause2.png") no-repeat;
+            display: block;
+            width: rem(18px);
+            height: rem(22px);
+            border: none;
+            background-size: cover;
+            margin-left: rem(1px);
+        }
+        
+    }
+}
+.player__start {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    padding: 0;
+    background: url("../img/play_start.svg") no-repeat;
+    width: rem(15px);
+    height: rem(19px);
+    margin-left: rem(5px);
+}
+
+.player__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.player-section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.player__splash {
+    background: url("../img/player_back.png") no-repeat;
+    width: rem(660px);
+    height: rem(366px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.player-img {
+    background: url("../img/play.svg");
+    width: rem(75px);
+    height: rem(109px);
+}
+.player__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.player__controls {
+    background: #404040;
+    width: 100%;
+    height: rem(35px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 0 12px;
+    
+}
+
+.player-play {
+    width: rem(13px);
+    height: rem(17px);
+}
+/*.player__playback {
+    position: relative;
+    height: 3px;
+    width: 500px;
+    background: #626262;
+}*/
+.player__playback {
+    height: rem(16px);
+    width: rem(446px);
+    position: relative;
+}
+.player__playback::before {
+    content: "";
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #626262;
+    display: block;
+    transform: translateY(-50%);
+}
+.player__playback-button {
+    background: #626262;
+    border-radius: 12px;
+    border: none;
+    width: rem(12px);
+    height: rem(12px);
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+
+}
+.player__start-button {
+    width: rem(11px);
+    height: rem(11px);
+    color: #626262;
+}
+.player__duration-completed::after {
+    content: ":";
+    margin-left: 2px;
+}

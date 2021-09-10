@@ -36,6 +36,8 @@ $z-fixed-menu: 100;
 @import 'blocks/menu-tablets.scss';
 @import 'blocks/team.scss';
 @import 'blocks/modal.scss';
+@import 'blocks/slider-menu.scss';
+@import 'blocks/player.scss';
 
 
 
@@ -112,14 +114,19 @@ $z-fixed-menu: 100;
     }
 }
 
-.section__footer {
-    position: relative;
-    justify-content: flex-start;
-    min-height: rem(952px);
 
-    @include tablets {
-        justify-content: flex-start;
+.section__footer {
+    display: flex;
+    background-color: white;
+    height: rem(87px);
+    min-height: auto;
+    width: 100%;
+    position: relative;
+
+    @include phones {
+        height: rem(51px);
     }
+    
 }
 .order-section {
     background: url("../img/background_order.png") no-repeat;
@@ -135,5 +142,6 @@ $z-fixed-menu: 100;
     }
 
 }
+
 
 

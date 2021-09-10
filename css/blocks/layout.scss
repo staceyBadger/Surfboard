@@ -1,4 +1,5 @@
 html {
+    height: 100%;
     font-size: $baseFontSize;
 
     @include tablets {
@@ -32,7 +33,7 @@ img {
 
 body {
     font-family: 'Alegreya Sans', sans-serif;
-    
+    height: 100%;
     line-height: 1.42;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -80,5 +81,16 @@ a {
     @include tablets {
         max-width: 530px;
     }
+}
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.maincontent {
+    height: 100%;
+    transition: transform 1s;
+    will-change: transform;
 }
 

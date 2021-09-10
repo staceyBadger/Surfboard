@@ -1,3 +1,4 @@
+
 .container__footer {
     display: flex;
     background-color: white;
@@ -10,7 +11,6 @@
     @include phones {
         height: rem(51px);
     }
-    
 }
 .footer {
     color: #292929;
