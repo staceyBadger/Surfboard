@@ -70,13 +70,12 @@ img {
 .hero {
   background: url("../img/bg_surf.png") no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   min-height: 36.1111111111rem; }
   @media screen and (max-width: 768px) {
     .hero {
       background: url("../img/bg_surf.png") right no-repeat;
       background-size: cover;
-      height: 100vh;
       min-height: 36.1111111111rem; } }
 
 body {
@@ -1212,7 +1211,7 @@ a {
       color: #FFD517; }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 36.2222222222rem;
   display: flex;
   flex-direction: column;

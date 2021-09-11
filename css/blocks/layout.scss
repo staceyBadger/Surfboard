@@ -20,13 +20,13 @@ img {
 .hero {
     background: url("../img/bg_surf.png") no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     min-height: rem(650px);
 
     @include tablets {
         background: url("../img/bg_surf.png") right no-repeat;
         background-size: cover;
-        height: 100vh;
+       
         min-height: rem(650px);
       }
 }
