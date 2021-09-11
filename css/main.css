@@ -501,6 +501,12 @@ a {
     left: 50%;
     transform: translate(-50%, -50%); }
 
+.fixed-menu-shadowed .fixed-menu__link::before {
+  background: black; }
+
+.fixed-menu-shadowed .fixed-menu__item--active .fixed-menu__link {
+  border-color: black; }
+
 .heading {
   width: 50%; }
   @media screen and (max-width: 768px) {
@@ -1236,7 +1242,6 @@ a {
   display: flex;
   background-color: white;
   height: 4.8333333333rem;
-  min-height: auto;
   width: 100%;
   position: relative; }
   @media screen and (max-width: 480px) {
