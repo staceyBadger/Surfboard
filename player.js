@@ -1,4 +1,4 @@
-let player;
+/*let player;
 const playerContainer = $('.player');
 
 
@@ -10,10 +10,10 @@ let eventsInit = () => {
        
 
         if(playerContainer.hasClass('paused')) {
-            /*playerContainer.removeClass("paused");*/
+            //playerContainer.removeClass("paused");
             player.pauseVideo();
         } else {
-            /*playerContainer.addClass("paused");*/
+           //playerContainer.addClass("paused");
             player.playVideo();
         }
     });
@@ -81,7 +81,7 @@ const onPlayerStateChange = event => {
     3 (буферизация)
     5 (видео подают реплики)
     */ 
-    switch (event.data) {
+ /*   switch (event.data) {
         case 1:
             playerContainer.addClass('active'); 
             playerContainer.addClass('paused');
@@ -115,4 +115,77 @@ const onPlayerStateChange = event => {
 }
 
 
-eventsInit();
+eventsInit();*/
+
+//video html5
+
+let video = document.getElementById("video");
+let progress = document.querySelector('#progress');
+let btnPlay = document.querySelector(".player__start");
+let time = document.querySelector(".player__playback");
+let videoTrack = document.querySelector(".player__playback-button"); 
+document.querySelector('#volume').onclick = videoVolume;
+/*let time = document.querySelector(".timeline");          
+let btnPlay = document.querySelector(".play");           
+let btnPause = document.querySelector(".pause");        
+let btnRewind = document.querySelector(".rewind");       
+let btnForward = document.querySelector(".forward");   */
+
+/*video.ontimeupdate = progressUpdate;*/
+/*progress.onClick = videoRewind;*/
+
+btnPlay.addEventListener("click", function() {
+    const playerContainer = $('.player');
+
+    if (playerContainer.hasClass("paused")) {
+        playerContainer.removeClass("paused");
+        video.pause();
+        clearInterval(videoPlay)
+        
+    } else {
+        playerContainer.addClass("paused");
+        video.play();
+    }
+    videoPlay = setInterval(function() {
+        
+        
+        let videoTime = Math.round(video.currentTime)
+        let d = Math.round(video.duration);
+        let completedPercent = (videoTime / d) * 100;
+        
+        
+        $(".player__playback-button").css({
+            left: `${completedPercent}%`
+          });
+    })
+    
+    /*$(".player__playback").on('click', e => {
+        const bar = $(e.currentTarget);
+        const clickedPosition = e.originalEvent.layerX;
+        
+        const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+        const newPlaybackPositionSec =
+          (video.duration() / 100) * newButtonPositionPercent;
+        
+        $(".player__playback-button").css({
+          left: `${newButtonPositionPercent}%`
+        });
+        
+       console.log(newPlaybackPositionSec)
+       });*/
+});
+
+
+
+function videoVolume() {
+    let v = this.value;
+    
+    video.volume = v / 100;
+}
+
+
+
+
+
+
+    

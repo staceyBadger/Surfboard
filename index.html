@@ -43,7 +43,7 @@
                                 <a href="#" data-scroll-to="player" class="menu__link">Как мы работаем</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" data-scroll-to="footer" class="menu__link">Контакты</a>
+                                <a href="#" data-scroll-to="map" class="menu__link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -720,22 +720,28 @@
         <div class="container">
             <h2 class="section__title">Как мы работаем</h2>
             <div class="player-section__container">
-                <div class="player">
+                <div class="player" id="videoPlayer">
                     <div class="player__wrapper">
-                        <div id="yt-player" class="player__elem"></div>
+                        <!--<div id="yt-player" class="player__elem"></div>-->
+                        <video src="Joey2.mp4" width="662px" height="357px" type="video/mp4" id="video"></video>
                         <div class="player__splash">
                             <div class="player-img"></div>
                         </div>
                     </div>
                     <div class="player__controls">
-                        <button class="player__start">
+                        <button class="player__start" id="play">
                         </button>
-                        <div class="player__playback">                       
+                        <div class="player__playback" id="progress">                       
                              <button class="player__playback-button"></button>
                         </div>
                         <div class="player__duration">
-                            <span class="player__duration-completed">0:00</span>
-                            <span class="player__duration-estimate">0:00</span>
+                            <img src="img/saund.svg" class="player__duration-saund">
+                            <div><input type="range" id="volume" min="0" max="10" step="1" class="input-range"></div>
+                            <!--<div class="saund-range">
+                                <button class="saund__button" id="value" min=0 max=100></button>
+                            </div>-->
+                            <!--<span class="player__duration-completed">0:00</span>
+                            <span class="player__duration-estimate">0:00</span>-->
                         </div>
                     </div>
                 </div>
@@ -819,8 +825,8 @@
     </section>
     <section data-sidemenu-theme="black" data-section-id="map" class="section section-map">
             <div id="map" class="map"></div>
-    </section>
-    <section data-sidemenu-theme="black" data-section-id="footer" class="section section__footer">
+    
+  <!-- <section data-sidemenu-theme="black" data-section-id="footer" class="section section__footer">--> 
            <div class="container__footer">
                 <div class="footer">
                     <div class="footer__address">
@@ -870,7 +876,7 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
     </div>
     </div>
     <nav class="fixed-menu">
@@ -891,6 +897,9 @@
                 <a href="#" data-scroll-to="slider-menu" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="reviews" class="fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
                 <a href="#" data-scroll-to="player" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
@@ -899,9 +908,7 @@
             <li class="fixed-menu__item">
                 <a href="#" data-scroll-to="map" class="fixed-menu__link"></a>
             </li>
-            <li class="fixed-menu__item">
-                <a href="#" data-scroll-to="footer" class="fixed-menu__link"></a>
-            </li>
+           
         </ul>
     </nav>
     <a href="#" class="hamburger" id="hamburger">
