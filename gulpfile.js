@@ -28,15 +28,30 @@ task("copy:html", () => {
     .pipe(dest(DIST_PATH))
     .pipe(reload({stream: true}));
 });
+task("copy:img", () => {
+  return src(`${SRC_PATH}/img/*.png`)
+  .pipe(dest(`${DIST_PATH}/img`))
+  .pipe(reload({stream: true}));
+});
+task("copy:svg", () => {
+  return src(`${SRC_PATH}/img/*.svg`)
+  .pipe(dest(`${DIST_PATH}/img`))
+  .pipe(reload({stream: true}));
+});
+task("copy:mp4", () => {
+  return src(`${SRC_PATH}/*.mp4`)
+  .pipe(dest(DIST_PATH))
+  .pipe(reload({stream: true}));
+});
 
 
 task("styles", () => {
-  return src([...STYLES_LIBS, 'src/styles/main.scss'])
+  return src([...STYLES_LIBS, 'src/css/main.scss'])
   .pipe(gulpif(env === 'dev', sourcemaps.init()))
   .pipe(concat('main.min.scss'))
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
-  .pipe(px2rem())
+  //.pipe(px2rem())
   .pipe(gulpif(env === 'prod', 
       autoprefixer({
         browsers: ["last 2 versions"],
@@ -64,7 +79,7 @@ task('scripts', () => {
 });
 
 task("icons", () => {
-  return src('src/images/icons/*.svg')
+  return src('src/img/icons/*.svg')
     .pipe(svgo({
       plugins: [
         {
@@ -82,7 +97,7 @@ task("icons", () => {
         }
       }
     }))
-    .pipe(dest("dist/images/icons"));
+    .pipe(dest("dist/img"));
 });
 
 task('server', () => {
@@ -95,10 +110,13 @@ task('server', () => {
 
 
 task('watch', () => {
-  watch('./src/styles/**/*.scss', series("styles"));
+  watch('./src/css/**/*.scss', series("styles"));
   watch('./src/*.html', series("copy:html"));
   watch('./src/scripts/*.js', series('scripts'));
-  watch('./src/images/icons/*.svg', series('icons'));
+  watch('./src/img/icons/*.svg', series('icons'));
+  watch('./src/img/*.png', series('copy:img'));
+  watch('./src/img/*.svg', series('copy:svg'));
+  watch('./src/*.mp4', series('copy:mp4'));
 });
 
 
@@ -107,10 +125,10 @@ task('watch', () => {
 task('default',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'),
+   parallel('copy:html', 'copy:img', 'styles', 'scripts', 'icons', 'copy:svg', 'copy:mp4'),
    parallel('watch', 'server')
  )
 );
 task('build',
- series('clean', parallel('copy:html', 'styles', 'scripts', 'icons'))
+ series('clean', parallel('copy:html', 'copy:img', 'copy:svg', 'styles', 'scripts', 'icons', 'copy:mp4'))
 );

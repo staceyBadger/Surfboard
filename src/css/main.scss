@@ -1,3 +1,5 @@
+@import 'normalize.scss';
+
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
@@ -10,10 +12,9 @@ $z-fixed-menu: 100;
 
 @import 'media.scss';
 
-@import 'normalize.css';
 
-@import 'blocks/menu.scss';
-@import 'blocks/advrtising.scss';
+@import 'blocks/*.scss';
+/*@import 'blocks/advrtising.scss';
 
 @import 'blocks/layout.scss';
 @import 'blocks/headline.scss';
@@ -39,7 +40,7 @@ $z-fixed-menu: 100;
 @import 'blocks/slider-menu.scss';
 @import 'blocks/player.scss';
 
-
+*/
 
 
 

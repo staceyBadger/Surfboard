@@ -57,10 +57,10 @@
 }
 
 .player__wrapper {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    /*top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 .player-section__container {
     display: flex;
@@ -68,10 +68,10 @@
     align-items: center;
     
 }
-/*.player__splash {
+.player__splash {
     background: url("../img/player_back.png") no-repeat;
-    width: rem(660px);
-    height: rem(366px);
+    width: rem(636px);
+    height: rem(363px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,13 +80,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     
-}*/
+}
 
-/*.player-img {
+.player-img {
     background: url("../img/play.svg");
     width: rem(75px);
     height: rem(109px);
-}*/
+}
 .player__wrapper {
     position: absolute;
     top: 50%;
@@ -109,8 +109,6 @@
 
     @include tablets {
         width: rem(594px);
-       
-        
         
     }
     @include phones {
@@ -223,13 +221,8 @@ input[type='range']{
  @include phones {
     width: rem(20px);
     
+    }
 }
-    
-  }
-  
-
-
-
 
 input[type='range']  {
     -webkit-appearance: none;

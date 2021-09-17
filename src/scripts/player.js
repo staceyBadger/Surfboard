@@ -123,7 +123,8 @@ let video = document.getElementById("video");
 let progress = document.querySelector('#progress');
 let btnPlay = document.querySelector(".player__start");
 let time = document.querySelector(".player__playback");
-let videoTrack = document.querySelector(".player__playback-button"); 
+let videoTrack = document.querySelector("#progress"); 
+let videoSplash = document.querySelector("#player__splash"); 
 document.querySelector('#volume').onclick = videoVolume;
 /*let time = document.querySelector(".timeline");          
 let btnPlay = document.querySelector(".play");           
@@ -139,11 +140,13 @@ btnPlay.addEventListener("click", function() {
 
     if (playerContainer.hasClass("paused")) {
         playerContainer.removeClass("paused");
+        playerContainer.removeClass('active');
         video.pause();
         clearInterval(videoPlay)
         
     } else {
         playerContainer.addClass("paused");
+        playerContainer.addClass('active'); 
         video.play();
     }
     videoPlay = setInterval(function() {
@@ -156,23 +159,23 @@ btnPlay.addEventListener("click", function() {
         
         $(".player__playback-button").css({
             left: `${completedPercent}%`
-          });
+          });  
     })
+    videoTrack.addEventListener("click", function(e) {
+        let posX = e.clientX - 480; // Вычисляем позицию нажатия
+        let timePos = (posX * 100) / 500;
+        console.log(timePos);
+        video.currentTime = (timePos * Math.round(video.duration)) / 100; 
+        console.log(video.currentTime)
+        /*let timePos = (clickedPosition * 100) / bar.width();  // Вычисляем процент перемотки
+        console.log(timePos);
+        time.style.width = timePos + '%'; // Присваиваем процент перемотки
+        /*video.currentTime = (timePos * Math.round(video.duration)) / 100 // Перематываем*/
+
+       // video.currentTime = (timePos * Math.round(video.duration)) / 100 ;
     
-    /*$(".player__playback").on('click', e => {
-        const bar = $(e.currentTarget);
-        const clickedPosition = e.originalEvent.layerX;
-        
-        const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-        const newPlaybackPositionSec =
-          (video.duration() / 100) * newButtonPositionPercent;
-        
-        $(".player__playback-button").css({
-          left: `${newButtonPositionPercent}%`
-        });
-        
-       console.log(newPlaybackPositionSec)
-       });*/
+    });
+    
 });
 
 
