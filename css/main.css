@@ -1084,6 +1084,14 @@ a {
     border: none;
     background-size: cover;
     margin-left: 0.0555555556rem; }
+  @media screen and (max-width: 768px) {
+    .player {
+      width: 33rem;
+      height: 19.5rem; } }
+  @media screen and (max-width: 480px) {
+    .player {
+      width: 21.8888888889rem;
+      height: 12.9444444444rem; } }
 
 .player__start {
   border: none;

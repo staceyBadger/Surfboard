@@ -21,6 +21,15 @@
         }
         
     }
+    @include tablets {
+        width: rem(594px);
+        height: rem(351px);
+    }
+    @include phones {
+        width: rem(394px);
+        height: rem(233px);
+    }
+
 }
 .player__start {
     border: none;
