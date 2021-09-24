@@ -1,5 +1,5 @@
 .slider-menu {
-    background: url("../img/Slider-m.png") no-repeat;
+    background: url("img/Slider-m.png") no-repeat;
     background-size: cover;
     height: 100vh;
     min-height: rem(650px);
@@ -35,20 +35,20 @@
     cursor: pointer;
 }
 .slide-first {
-    background: url("../img/Slide1.png") no-repeat;
+    background: url("img/Slide1.png") no-repeat;
     display: flex;
     align-items: flex-end;
     background-size: cover;
     
 }
 .slide-second {
-    background: url("../img/Slide2.png") no-repeat;
+    background: url("img/Slide2.png") no-repeat;
     display: flex;
     align-items: flex-end;
     background-size: cover;
 }
 .slide-third {
-    background: url("../img/Slide3.png") no-repeat;
+    background: url("img/Slide3.png") no-repeat;
     display: flex;
     align-items: flex-end;
     background-size: cover;

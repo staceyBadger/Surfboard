@@ -18,13 +18,13 @@ img {
     max-width: 100%;
 }
 .hero {
-    background: url("../img/bg_surf.png") no-repeat;
+    background: url("img/bg_surf.png") no-repeat;
     background-size: cover;
     height: 100%;
     min-height: rem(650px);
 
     @include tablets {
-        background: url("../img/bg_surf.png") right no-repeat;
+        background: url("img/bg_surf.png") right no-repeat;
         background-size: cover;
        
         min-height: rem(650px);

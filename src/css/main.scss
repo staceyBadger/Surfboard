@@ -120,7 +120,6 @@ $z-fixed-menu: 100;
     display: flex;
     background-color: white;
     height: rem(87px);
-    
     width: 100%;
     position: relative;
 
@@ -130,7 +129,7 @@ $z-fixed-menu: 100;
     
 }
 .order-section {
-    background: url("../img/background_order.png") no-repeat;
+    background: url("img/background_order.png") no-repeat;
     background-size: cover;
     height: 100vh;
     min-height: rem(652px);
